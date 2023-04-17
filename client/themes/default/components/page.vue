@@ -87,8 +87,8 @@
         v-layout(row)
           v-flex.page-col-sd(
             v-if='tocPosition !== `off` && $vuetify.breakpoint.lgAndUp'
-            :order-xs1='tocPosition !== `right`'
-            :order-xs2='tocPosition === `right`'
+            :order-xs1='tocPosition === `right`'
+            :order-xs2='tocPosition !== `right`'
             lg3
             xl2
             )
@@ -224,8 +224,8 @@
             xs12
             :lg9='tocPosition !== `off`'
             :xl10='tocPosition !== `off`'
-            :order-xs1='tocPosition === `right`'
-            :order-xs2='tocPosition !== `right`'
+            :order-xs1='tocPosition !== `right`'
+            :order-xs2='tocPosition === `right`'
             )
             v-tooltip(:right='$vuetify.rtl', :left='!$vuetify.rtl', v-if='hasAnyPagePermissions && editShortcutsObj.editFab')
               template(v-slot:activator='{ on: onEditActivator }')
